@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Оформление доставки | Kitsune-makicafe</title>
+</head>
+
+<body>
+    <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="mobile-logo-wrapper">
+        <img src="logo.png" class="mobile-logo" alt="Kitsune-makicafe logo">
+        <h1>Kitsune-makicafe</h1>
+    </div>
+
+    <div class="mobile-menu">
+        <a href="index.html">О нас</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="info.html">Информация</a>
+        <a href="events.html">События</a>
+    </div>
+
+    <div class="menu-overlay"></div>
+
+    <header>
+        <nav class="nav-main">
+            <a href="index.html">О нас</a>
+            <a href="catalog.html">Каталог</a>
+            <div class="logo-wrapper">
+                <img src="logo.png" class="logo" alt="Kitsune-makicafe logo">
+                <h1>Kitsune-makicafe</h1>
+            </div>
+            <a href="info.html">Информация</a>
+            <a href="events.html">События</a>
+        </nav>
+
+    </header>
+
+
+    <div class="delivery-form">
+        <form id="deliveryForm">
+            <h3 class="delivery-title">Оформление доставки</h3>
+
+            <div class="form-group">
+                <label class="form-label">ФИО</label>
+                <input type="text" class="form-input" placeholder="Введите ваше полное имя" required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Номер телефона</label>
+                <input type="tel" class="form-input" placeholder="+7 (XXX) XXX-XX-XX" pattern="\+?[0-9\s\-\(\)]+"
+                    required>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Адрес доставки</label>
+                <input type="text" class="form-input" placeholder="Улица, дом" required>
+            </div>
+
+            <div class="form-options">
+                <div class="form-option">
+                    <label class="option-label">Номер квартиры</label>
+                    <input type="number" class="option-input" min="1" max="999">
+                </div>
+
+                <div class="form-option">
+                    <input type="checkbox" id="privateHouse" class="option-checkbox">
+                    <label for="privateHouse" class="option-label">Частный дом</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Время доставки</label>
+                <select class="form-input" required>
+                    <option value="">Выберите время</option>
+                    <option value="asap">Как можно скорее</option>
+                    <option value="12-14">12:00 - 14:00</option>
+                    <option value="14-16">14:00 - 16:00</option>
+                    <option value="16-18">16:00 - 18:00</option>
+                    <option value="18-20">18:00 - 20:00</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label class="form-label">Комментарий к заказу</label>
+                <textarea class="form-input" rows="3" placeholder="Укажите дополнительные пожелания"></textarea>
+            </div>
+
+            <button type="submit" class="submit-button">Подтвердить заказ</button>
+        </form>
+    </div>
+
+    <footer>
+        <nav class="nav-footer">
+            <a href="index.html">О нас</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="info.html">Информация</a>
+            <a href="events.html">События</a>
+        </nav>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Kitsune-makiсafe</h1>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="inst.png" class="social-icon" alt="Instagram"></a>
+                <a href="#"><img src="vk.png" class="social-icon" alt="VK"></a>
+                <a href="#"><img src="tg.png" class="social-icon" alt="Telegram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('deliveryForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Валидация
+            const requiredInputs = document.querySelectorAll('.form-input[required], select[required]');
+            let isValid = true;
+
+            requiredInputs.forEach(input => {
+                if (!input.value.trim()) {
+                    input.style.borderColor = 'red';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '#ddd';
+                }
+            });
+
+            if (isValid) {
+                alert('Ваш заказ успешно оформлен! Скоро с вами свяжется наш оператор для подтверждения.');
+
+                this.reset();
+
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 3000);
+            } else {
+                alert('Пожалуйста, заполните все обязательные поля!');
+            }
+        });
+
+        document.querySelectorAll('.form-input[required], select[required]').forEach(input => {
+            input.addEventListener('blur', function () {
+                if (!this.value.trim()) {
+                    this.style.borderColor = 'red';
+                } else {
+                    this.style.borderColor = '#ddd';
+                }
+            });
+        });
+
+        // Мобильное меню
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const body = document.body;
+
+        if (mobileMenuToggle && mobileMenu && menuOverlay) {
+            mobileMenuToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                menuOverlay.classList.toggle('active');
+                body.classList.toggle('menu-open');
+
+                // Анимация бургера
+                const spans = this.querySelectorAll('span');
+                if (this.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+
+            menuOverlay.addEventListener('click', closeMenu);
+
+            // Закрытие при клике на ссылки
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        }
+
+        function closeMenu() {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            body.classList.remove('menu-open');
+
+            const spans = mobileMenuToggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+
+    </script>
+</body>
+
+</html>

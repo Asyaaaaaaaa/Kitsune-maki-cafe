@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>События | Kitsune-makicafe</title>
+</head>
+
+<body>
+    <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="mobile-logo-wrapper">
+        <img src="logo.png" class="mobile-logo" alt="Kitsune-makicafe logo">
+        <h1>Kitsune-makicafe</h1>
+    </div>
+
+    <div class="mobile-menu">
+        <a href="index.html">О нас</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="info.html">Информация</a>
+        <a href="events.html">События</a>
+    </div>
+
+    <div class="menu-overlay"></div>
+
+    <header>
+        <nav class="nav-main">
+            <a href="index.html">О нас</a>
+            <a href="catalog.html">Каталог</a>
+            <div class="logo-wrapper">
+                <img src="logo.png" class="logo" alt="Kitsune-makicafe logo">
+                <h1>Kitsune-makicafe</h1>
+            </div>
+            <a href="info.html">Информация</a>
+            <a href="events.html">События</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="events-container">
+        <section class="events-hero">
+            <h2>Мероприятия в Kitsune-makiсafe</h2>
+            <p>Приглашаем всех желающих на наши увлекательные мероприятия!</p>
+        </section>
+        </div>
+
+        <section class="events-description">
+            <div class="container">
+                <p>Kitsune-makiсafe - это не только вкусная японская кухня, но и место, где вы можете окунуться в
+                    атмосферу японской культуры, научиться новому и весело провести время.</p>
+
+                <div class="event-cards-container">
+                    <div class="event-item">
+                        <div class="event-card">
+                            <img src="s1.jpg" alt="Создание масок Китсуне">
+                            <div class="card-content">
+                                <h3>“Создание масок Китсуне”</h3>
+                                <p>Научитесь создавать уникальные маски в японском стиле, узнайте больше о культуре и мифологии
+                                    Японии.</p>
+                                <p class="event-time">Каждый вторник с 12:00 до 13:30</p>
+                                <button class="ticket-button" onclick="showTicketModal('Создание масок Китсуне', 500)">Купить билет</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-card">
+                            <img src="s2.jpg" alt="Мастер-класс по суши">
+                            <div class="card-content">
+                                <h3>“Мастер-класс по приготовлению суши и роллов”</h3>
+                                <p>Научитесь готовить свои любимые японские блюда под руководством нашего шеф-повара.</p>
+                                <p class="event-time">Каждую пятницу с 14:30 до 16:30</p>
+                                <button class="ticket-button" onclick="showTicketModal('Мастер-класс по суши', 800)">Купить билет</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="event-item">
+                        <div class="event-card">
+                            <img src="s3.jfif" alt="Турниры по настольным играм">
+                            <div class="card-content">
+                                <h3>“Турниры по японским настольным играм”</h3>
+                                <p>Примите участие в турнирах по Го и Сёги, познакомьтесь с традиционными японскими играми.</p>
+                                <p class="event-time">Каждую субботу с 15:00 до 18:00</p>
+                                <button class="ticket-button" onclick="showTicketModal('Турниры по настольным играм', 300)">Купить билет</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="events-cta">Приходите и окунитесь в атмосферу японской культуры, насладитесь вкусными блюдами
+                    и получите новые навыки! Мы ждем вас в Kitsune-makiсafe!</p>
+            </div>
+        </section>
+
+        <!-- Модальное окно покупки билетов -->
+        <div id="ticketModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h3 id="modalEventTitle"></h3>
+                <p id="modalEventPrice"></p>
+                <form id="ticketForm">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Количество билетов:</label>
+                        <input type="number" id="quantity" min="1" max="10" value="1">
+                    </div>
+                    <button type="submit" class="submit-button">Оформить заказ</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Модальное окно подтверждения -->
+        <div id="confirmationModal" class="modal">
+            <div class="modal-content">
+                <h3>Спасибо за заказ!</h3>
+                <p>Ваши билеты на <span id="confirmedEvent"></span> успешно зарезервированы.</p>
+                <p>На ваш email отправлено подтверждение.</p>
+                <button onclick="closeConfirmationModal()" class="submit-button">Закрыть</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <nav class="nav-footer">
+            <a href="index.html">О нас</a>
+            <a href="catalog.html">Каталог</a>
+            <a href="info.html">Информация</a>
+            <a href="events.html">События</a>
+        </nav>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h1>Kitsune-makiсafe</h1>
+            </div>
+            <div class="social-links">
+                <a href="#"><img src="inst.png" class="social-icon" alt="Instagram"></a>
+                <a href="#"><img src="vk.png" class="social-icon" alt="VK"></a>
+                <a href="#"><img src="tg.png" class="social-icon" alt="Telegram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Мобильное меню
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        const body = document.body;
+
+        if (mobileMenuToggle && mobileMenu && menuOverlay) {
+            mobileMenuToggle.addEventListener('click', function () {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                menuOverlay.classList.toggle('active');
+                body.classList.toggle('menu-open');
+
+                // Анимация бургера
+                const spans = this.querySelectorAll('span');
+                if (this.classList.contains('active')) {
+                    spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+                    spans[1].style.opacity = '0';
+                    spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+                } else {
+                    spans[0].style.transform = 'none';
+                    spans[1].style.opacity = '1';
+                    spans[2].style.transform = 'none';
+                }
+            });
+
+            menuOverlay.addEventListener('click', closeMenu);
+
+            // Закрытие при клике на ссылки
+            document.querySelectorAll('.mobile-menu a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+        }
+
+        function closeMenu() {
+            mobileMenuToggle.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            body.classList.remove('menu-open');
+
+            const spans = mobileMenuToggle.querySelectorAll('span');
+            spans[0].style.transform = 'none';
+            spans[1].style.opacity = '1';
+            spans[2].style.transform = 'none';
+        }
+
+        // Модальное окно покупки билетов
+        function showTicketModal(eventName, price) {
+            const modal = document.getElementById('ticketModal');
+            document.getElementById('modalEventTitle').textContent = eventName;
+            document.getElementById('modalEventPrice').textContent = `Цена: ${price} руб.`;
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('ticketModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        function closeConfirmationModal() {
+            document.getElementById('confirmationModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Обработка формы
+        document.getElementById('ticketForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const eventName = document.getElementById('modalEventTitle').textContent;
+            document.getElementById('confirmedEvent').textContent = eventName;
+            
+            closeModal();
+            document.getElementById('ticketModal').style.display = 'none';
+            document.getElementById('confirmationModal').style.display = 'block';
+            this.reset();
+        });
+
+        // Закрытие модальных окон при клике вне их
+        window.addEventListener('click', function(event) {
+            if (event.target.classList.contains('modal')) {
+                event.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+
+</html>

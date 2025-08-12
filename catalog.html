@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="style2.css" rel="stylesheet">
+    <title>Меню | Kitsune-makicafe</title>
+</head>
+
+<body>
+
+    <div class="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <div class="mobile-logo-wrapper">
+        <img src="logo.png" class="mobile-logo" alt="Kitsune-makicafe logo">
+        <h1>Kitsune-makicafe</h1>
+    </div>
+
+    <div class="mobile-menu">
+        <a href="index.html">О нас</a>
+        <a href="catalog.html">Каталог</a>
+        <a href="info.html">Информация</a>
+        <a href="events.html">События</a>
+
+        <div class="category-nav">
+            <a href="#sushi">Суши и роллы</a>
+            <a href="#set">Сеты</a>
+            <a href="#soup">Супы и лапша</a>
+            <a href="#snack">Закуски</a>
+            <a href="#dessert">Десерты</a>
+            <a href="#drink">Напитки</a>
+        </div>
+    </div>
+
+    <div class="menu-overlay"></div>
+
+    <header>
+        <nav class="nav-main" id="mainNav">
+            <a href="index.html">О нас</a>
+            <a href="katalog.html">Каталог</a>
+            <div class="logo-wrapper">
+                <img src="logo.png" class="logo" alt="Kitsune-makicafe logo">
+                <h1 class="logo-title">Kitsune-makicafe</h1>
+            </div>
+            <a href="info.html">Информация</a>
+            <a href="events.html">События</a>
+        </nav>
+        <div class="fixed-categories" id="fixedCategories">
+            <div class="category-nav">
+                <a href="#sushi">Суши и роллы</a>
+                <a href="#set">Сеты</a>
+                <a href="#soup">Супы и лапша</a>
+                <a href="#snack">Закуски</a>
+                <a href="#dessert">Десерты</a>
+                <a href="#drink">Напитки</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-wrapper">
+
+            <div class="back-to-top" id="backToTop"></div>
+
+            <button class="cart" id="cart">
+                <img class="cart__image" src="cart.png" alt="Cart" />
+                <div class="cart__num" id="cart_num">0</div>
+            </button>
+
+            <div class="category">
+                <p id="daily">Блюдо дня</p>
+            </div>
+            <div class="main-div">
+                <div class="product daily-special" id="daily-special">
+                    <img src="day1.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta" id="daily-weight">400 г.</span>
+                            <p class="product-name" id="daily-name">Вок с рисом и курицей</p>
+                        </div>
+                        <div class="about">
+                            <p id="daily-desc">Состав: рис, курица, овощи, соус терияки.</p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add daily-add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price" id="daily-price">350</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <p id="sushi">Суши и роллы</p>
+            </div>
+            <div class="main-div">
+
+                <div class="product">
+                    <img src="r1.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">8 шт 240 г.</span>
+                            <p class="product-name">Острый ролл с тунцом</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: тунец, авокадо, огурец, острый соус, имбирь, рис, нори.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">390</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="r2.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">8 шт 220 г.</span>
+                            <p class="product-name">Вегетарианский ролл с авокадо</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: огурец, сливочный сыр, авокадо, японский майонез, нори, рис.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">350</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="r3.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">8 шт 250 г.</span>
+                            <p class="product-name">Ролл с тунцом и авокадо</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рис, тунец, авокадо, сливочный сыр, нори.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">370</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="r4.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">8 шт 260 г.</span>
+                            <p class="product-name">Классическая Филадельфия</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рис, лосось, огурец, сливочный сыр, нори.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">420</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="r5.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">8 шт 280 г.</span>
+                            <p class="product-name">Большой ролл с морским окунем</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рис, морской окунь, огурец, морковь, авокадо, нори.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">450</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="r6.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">8 шт 240 г.</span>
+                            <p class="product-name">Филадельфия с копчёным угрём</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рис, угорь, авокадо, сливочный сыр, соус унаги, нори.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">480</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="r7.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">8 шт 230 г.</span>
+                            <p class="product-name">Ролл с тунцом и кунжутом</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: тунец, огурец, авокадо, кунжут, нори, рис.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">420</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <p id="set">Сеты суши и роллов</p>
+            </div>
+
+            <div class="main-div">
+
+                <div class="product">
+                    <img src="set1.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">14 шт 650 г.</span>
+                            <p class="product-name">Сет "Рассвет"</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: 12 роллов с тунцом и авокадо, 2 нигири с лососем.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">850</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="set2.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">14 шт 680 г.</span>
+                            <p class="product-name">Сет "Полдень"</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: 12 острых роллов с тунцом, 2 нигири с угрём.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">880</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="set3.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">21 шт 900 г.</span>
+                            <p class="product-name">Сет "Закат"</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: 12 роллов с тунцом и авокадо, 6 классической Филадельфии, 2 нигири, 1 большой
+                                ролл.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">1100</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="set4.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">12 шт 750 г.</span>
+                            <p class="product-name">Сет "Вечер"</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: 5 классической Филадельфии, 1 большой вегетарианский ролл, 6 больших роллов.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">1050</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <p id="soup">Супы и лапша</p>
+            </div>
+
+            <div class="main-div">
+
+                <div class="product">
+                    <img src="l1.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">400 г.</span>
+                            <p class="product-name">Удон с говядиной</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: лапша удон, говядина, бульон, нори, зелень.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">280</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="l2.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">350 г.</span>
+                            <p class="product-name">Том Ям</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: кокосовое молоко, креветки, грибы, лемонграсс, лайм.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">320</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="l3.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">380 г.</span>
+                            <p class="product-name">Овощной удон</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: лапша удон, морковь, брокколи, перец, нори.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">250</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="l4.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">350 г.</span>
+                            <p class="product-name">Лапша с яйцом</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: яичная лапша, яйцо, зелень, бульон.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">220</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="l5.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">400 г.</span>
+                            <p class="product-name">Говяжий рамен</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: лапша, говядина, яйцо, бульон, зелень.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">290</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="l6.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">300 г.</span>
+                            <p class="product-name">Классический мисо-суп</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: паста мисо, тофу, водоросли вакаме, зелёный лук.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">240</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <p id="snack">Закуски</p>
+            </div>
+            <div class="main-div">
+
+                <div class="product">
+                    <img src="z1.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">2 шт 120 г.</span>
+                            <p class="product-name">Булочки с начинкой</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: пшеничная булочка, корица/красная бобовая паста.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">150</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="z2.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">3 шт 150 г.</span>
+                            <p class="product-name">Рисовые шарики с креветками</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рис, креветки, нори, кунжут.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">220</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="z3.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">2 шт 180 г.</span>
+                            <p class="product-name">Тэмаки ролл</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рис, нори, лосось/авокадо/огурец.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">240</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="z4.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">5 шт 200 г.</span>
+                            <p class="product-name">Креветки темпура</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: креветки, темпурный кляр, соус.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">280</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="z5.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">1 шт 150 г.</span>
+                            <p class="product-name">Онигири с курицей</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рис, курица, нори, кунжут.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">170</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <p id="dessert">Десерты</p>
+            </div>
+
+            <div class="main-div">
+
+                <div class="product">
+                    <img src="d1.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">150 г.</span>
+                            <p class="product-name">Японский чизкейк с клубникой</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: песочная основа, сырный крем, клубника.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">280</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="d2.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">150 г.</span>
+                            <p class="product-name">Чизкейк с лесными ягодами</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: песочная основа, сырный крем, малина/голубика.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">280</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="d3.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">150 г.</span>
+                            <p class="product-name">Чизкейк с матча</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: основа из печенья, сырный крем с матча.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">310</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="d4.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">100 г.</span>
+                            <p class="product-name">Домашнее ванильное мороженое</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: сливочное мороженое, ваниль.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">180</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="d5.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">120 г.</span>
+                            <p class="product-name">Пудинг с матча</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: молоко, матча, карамельный соус.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">240</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="d6.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">6 шт 200 г.</span>
+                            <p class="product-name">Фруктовые роллы</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рис, творожный крем, клубника.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">340</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="d7.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">3 шт 150 г.</span>
+                            <p class="product-name">Моти с вишнёвой начинкой</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рисовое тесто, вишнёвая паста.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">270</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="d8.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">150 г.</span>
+                            <p class="product-name">Тирамису с ягодами</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: печенье савоярди, маскарпоне, ягоды.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">300</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category">
+                <p id="drink">Напитки</p>
+            </div>
+            <div class="main-div">
+
+                <div class="product">
+                    <img src="n1.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">30 мл.</span>
+                            <p class="product-name">Классический эспрессо</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: рабика средней обжарки.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">150</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="n2.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">250 мл.</span>
+                            <p class="product-name">Домашний ягодный морс</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: смородина/малина, мёд.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">155</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product">
+                    <img src="n3.jpg" id="prod-img">
+                    <div class="prod-main">
+                        <div class="product-header">
+                            <span class="product-meta">300 мл.</span>
+                            <p class="product-name">Чёрный чай</p>
+                        </div>
+                        <div class="about">
+                            <p>Состав: листовой чай.
+                            </p>
+                        </div>
+                        <div class="price-and-button">
+                            <button class="card__add">В корзину</button>
+                            <p class="price-text">Цена: <span class="product-price">100</span> ₽</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="popup">
+                <div class="popup__container" id="popup_container">
+                    <div class="popup__item">
+                        <h1 class="popup__title">Оформление заказа</h1>
+                    </div>
+                    <div class="popup__item" id="popup_product_list">
+                        <div class="popup__product">
+                            <div class="popup__product-wrap">
+                                <img src="r1.jpg" alt='Ролл "Огонь кицуне"' class="popup__product-image" />
+                                <h2 class="popup__product-title">Ролл "Огонь кицуне"</h2>
+                            </div>
+                            <div class="popup__product-wrap">
+                                <div class="popup__product-price">450</div>
+                                <button class="popup__product-delete">✖</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__item">
+                        <div class="popup__cost">
+                            <h2 class="popup__cost-title">Итого</h2>
+                            <output class="popup__cost-value" id="popup_cost">450</output>
+                        </div>
+                        <div class="accept">
+                            <a href="dostavka.html"> Подтвердить </a>
+                        </div>
+                    </div>
+                    <button class="popup__close" id="popup_close"></button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <nav class="nav-footer">
+                <a href="index.html">О нас</a>
+                <a href="katalog.html">Каталог</a>
+                <a href="info.html">Информация</a>
+                <a href="events.html">События</a>
+            </nav>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h1 class="logo-title">Kitsune-makiсafe</h1>
+                </div>
+                <div class="social-links">
+                    <a href="#"><img src="inst.png" class="social-icon" alt="Instagram"></a>
+                    <a href="#"><img src="vk.png" class="social-icon" alt="VK"></a>
+                    <a href="#"><img src="tg.png" class="social-icon" alt="Telegram"></a>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            // Мобильное меню
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            const menuOverlay = document.querySelector('.menu-overlay');
+            const body = document.body;
+
+            if (mobileMenuToggle && mobileMenu && menuOverlay) {
+                mobileMenuToggle.addEventListener('click', function () {
+                    this.classList.toggle('active');
+                    mobileMenu.classList.toggle('active');
+                    menuOverlay.classList.toggle('active');
+                    body.classList.toggle('menu-open');
+
+                    // Анимация бургера
+                    const spans = this.querySelectorAll('span');
+                    if (this.classList.contains('active')) {
+                        spans[0].style.transform = 'rotate(45deg) translate(5px, 6px)';
+                        spans[1].style.opacity = '0';
+                        spans[2].style.transform = 'rotate(-45deg) translate(5px, -6px)';
+                    } else {
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    }
+                });
+
+                menuOverlay.addEventListener('click', closeMenu);
+
+                // Закрытие при клике на ссылки
+                document.querySelectorAll('.mobile-menu a').forEach(link => {
+                    link.addEventListener('click', closeMenu);
+                });
+            }
+
+            function closeMenu() {
+                mobileMenuToggle.classList.remove('active');
+                mobileMenu.classList.remove('active');
+                menuOverlay.classList.remove('active');
+                body.classList.remove('menu-open');
+
+                const spans = mobileMenuToggle.querySelectorAll('span');
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+
+            window.addEventListener('scroll', function () {
+                const mainNav = document.getElementById('mainNav');
+                const fixedCategories = document.getElementById('fixedCategories');
+                const scrollPosition = window.scrollY;
+
+                if (scrollPosition > 100) {
+                    mainNav.style.transform = 'translateY(-100%)';
+                    mainNav.style.opacity = '0';
+                    fixedCategories.style.position = 'fixed';
+                    fixedCategories.style.top = '30%';
+                    fixedCategories.style.width = '100%';
+                    fixedCategories.style.zIndex = '1000';
+                } else {
+                    mainNav.style.transform = 'translateY(0)';
+                    mainNav.style.opacity = '1';
+                    fixedCategories.style.position = 'static';
+                }
+            });
+
+            window.addEventListener('scroll', function () {
+                const backToTop = document.getElementById('backToTop');
+                if (window.pageYOffset > 300) {
+                    backToTop.classList.add('visible');
+                } else {
+                    backToTop.classList.remove('visible');
+                }
+            });
+
+            // Плавный скролл вверх при клике
+            document.getElementById('backToTop').addEventListener('click', function (e) {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        </script>
+        <script src="script2.js"></script>
+</body>
+
+</html>
